@@ -1,0 +1,91 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.top {
+  margin-bottom: 5px;
+  height: 60px;
+  width: 100%;
+}
+
+.middle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: inherit;
+  z-index: -100000;
+}
+
+.bottom {
+  left: 25%;
+  width: 50%;
+  margin-top: 5px;
+  position: fixed;
+  bottom: 3px;
+  z-index: 100000;
+}
+
+.App {
+  padding: 5px;
+}
+
+.note {
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+}
+
+.noteColumn {
+  padding-left: 10px;
+  background-clip: padding-box;
+  border: none;
+}
+
+.noteColumn > div {
+  margin-bottom: 12px;
+  background: #f0f2f1;
+  border-radius: 10px;
+}
+
+.noteColumn > div > .card {
+  border-radius: inherit;
+  z-index: 100;
+}
+
+.noteColumn > div > .card:hover {
+  box-shadow: 1px 1px lightgray;
+}
+
+.noteColumn > .notecard > .card {
+  max-height: 280px;
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  .note {
+    margin-left: -15px;
+  }
+
+  .noteColumn {
+    padding-left: 15px;
+  }
+
+  .noteColumn > div {
+    margin-bottom: 10px;
+  }
+}
+
+.loginPage {
+  display: flex;
+  min-height: 85vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginPage > .loginForm {
+  width: 50%;
+}
