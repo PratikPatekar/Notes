@@ -26,10 +26,8 @@ const Register = () => {
       password: password,
     })
       .then((res) => {
-        if (res.status === 200) {
-          console.log(res);
-          history.push("/login");
-        }
+        console.log(res);
+        history.push("/login");
       })
       .catch((err) => {
         setInvalidUser(true);

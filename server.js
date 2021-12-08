@@ -20,7 +20,7 @@ mongoose
   .catch((err) => console.log("Failed to connect to MongoDB", err));
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "/client/build")));
+app.use(express.static(path.join(__dirname, "client", "build")));
 app.use(cors());
 
 app.use("/api/notes", noteRoutes);
@@ -28,7 +28,7 @@ app.use("/api/notes", noteRoutes);
 app.use("/api/user", authRoute);
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/build/index.html"));
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 app.listen(PORT, () => {
