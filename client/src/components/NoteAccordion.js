@@ -27,7 +27,7 @@ const NoteAccordion = ({ title, body, open, id, handleChange }) => {
   const updateNote = () => {
     instanceAxios
       .put(
-        `http://localhost:3080/api/notes/update`,
+        `/api/notes/update`,
         {
           id: id,
           title: noteTitle,
@@ -46,7 +46,7 @@ const NoteAccordion = ({ title, body, open, id, handleChange }) => {
 
   const deleteNote = () => {
     instanceAxios
-      .delete(`http://localhost:3080/api/notes/delete`, {
+      .delete(`/api/notes/delete`, {
         headers: { authtoken: getToken(), dataid: id },
       })
       .then((res) => {

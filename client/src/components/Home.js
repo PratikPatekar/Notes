@@ -17,7 +17,7 @@ const Home = () => {
     else {
       setisDataLoaded(false);
       instanceAxios
-        .get("http://localhost:3080/api/notes", {
+        .get("/api/notes", {
           headers: {
             authtoken: getToken(),
           },

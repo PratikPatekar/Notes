@@ -24,7 +24,7 @@ const Bottom = ({ handleChange }) => {
   const addNewNote = () => {
     instanceAxios
       .post(
-        "http://localhost:3080/api/notes/add",
+        "/api/notes/add",
         {
           title: noteTitle,
           body: noteBody,
